@@ -1,2 +1,40 @@
-*.pyc
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Python environments
+.venv/
+venv/
+env/
+
+# Testing and linting
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MLflow local tracking data
+mlruns/
+
+# Logs
+*.log
+
+# Local environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Vim temporary files
 *.swp
+*.swo
