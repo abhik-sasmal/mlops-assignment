@@ -1,0 +1,12 @@
+{
+    "dataset_id": 45,
+    "dataset_name": "Heart Disease",
+    "source": "https://archive.ics.uci.edu/dataset/45/heart+disease",
+    "num_instances": 303,
+    "num_features": 13,
+    "target_column": [
+        "num"
+    ],
+    "license": "CC BY 4.0",
+    "citation": "Janosi, A., Steinbrunn, W., Pfisterer, H., & Detrano, R. (1989). Heart Disease. UCI Machine Learning Repository. https://doi.org/10.24432/C52P4X"
+}

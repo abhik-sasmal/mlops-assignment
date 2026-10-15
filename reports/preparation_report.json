@@ -1,0 +1,44 @@
+{
+    "original_rows": 303,
+    "prepared_rows": 303,
+    "prepared_columns": [
+        "age",
+        "sex",
+        "cp",
+        "trestbps",
+        "chol",
+        "fbs",
+        "restecg",
+        "thalach",
+        "exang",
+        "oldpeak",
+        "slope",
+        "ca",
+        "thal",
+        "target"
+    ],
+    "missing_values_after_preparation": {
+        "age": 0,
+        "sex": 0,
+        "cp": 0,
+        "trestbps": 0,
+        "chol": 0,
+        "fbs": 0,
+        "restecg": 0,
+        "thalach": 0,
+        "exang": 0,
+        "oldpeak": 0,
+        "slope": 0,
+        "ca": 4,
+        "thal": 2,
+        "target": 0
+    },
+    "target_mapping": {
+        "0": "No heart disease (original num = 0)",
+        "1": "Heart disease present (original num > 0)"
+    },
+    "target_distribution": {
+        "0": 164,
+        "1": 139
+    }
+}
