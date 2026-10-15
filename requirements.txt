@@ -24,3 +24,6 @@ uvicorn==0.39.0
 # Testing and code quality
 pytest==8.4.2
 ruff==0.17.0
+
+
+httpx==0.28.1
