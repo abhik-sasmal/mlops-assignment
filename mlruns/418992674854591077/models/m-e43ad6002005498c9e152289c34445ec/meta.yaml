@@ -1,0 +1,10 @@
+artifact_location: file:///run/media/abhik/HDD-1TB/mlops-assignment/mlruns/418992674854591077/models/m-e43ad6002005498c9e152289c34445ec/artifacts
+creation_timestamp: 1792077369607
+experiment_id: '418992674854591077'
+last_updated_timestamp: 1792077372856
+model_id: m-e43ad6002005498c9e152289c34445ec
+model_type: null
+name: model
+source_run_id: 6ee1e9388d534494b0879ff1911dd2ab
+status: 2
+status_message: null

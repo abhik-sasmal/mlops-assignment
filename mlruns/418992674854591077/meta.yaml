@@ -1,0 +1,6 @@
+artifact_location: file:///run/media/abhik/HDD-1TB/mlops-assignment/mlruns/418992674854591077
+creation_time: 1792077356057
+experiment_id: '418992674854591077'
+last_update_time: 1792077356057
+lifecycle_stage: active
+name: heart-disease-classification

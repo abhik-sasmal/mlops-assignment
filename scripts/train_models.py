@@ -25,6 +25,8 @@ from heart_mlops.pipeline import (
     build_logistic_regression,
     build_random_forest,
 )
+import mlflow
+import mlflow.sklearn
 
 
 RANDOM_STATE = 42
@@ -98,6 +100,9 @@ def calculate_metrics(y_true, y_pred, y_probability):
 
 
 def main():
+    # Store MLflow experiments inside the project directory.
+    mlflow.set_tracking_uri((PROJECT_ROOT / "mlruns").as_uri())
+    mlflow.set_experiment("heart-disease-classification")
     print("Loading dataset...")
     X, y = load_dataset()
 
@@ -198,6 +203,60 @@ def main():
             y_pred,
             y_probability,
         )
+
+                # Track this model evaluation in MLflow.
+        with mlflow.start_run(run_name=model_name):
+
+            # Record the model and dataset configuration.
+            mlflow.log_params(
+                {
+                    "model_name": model_name,
+                    "random_state": RANDOM_STATE,
+                    "test_size": TEST_SIZE,
+                    "cv_folds": CV_FOLDS,
+                    "training_observations": len(X_train),
+                    "test_observations": len(X_test),
+                }
+            )
+
+            # Record cross-validation means and standard deviations.
+            for metric_name, summary in cv_summary.items():
+                mlflow.log_metric(
+                    f"cv_{metric_name}_mean",
+                    summary["mean"],
+                )
+                mlflow.log_metric(
+                    f"cv_{metric_name}_std",
+                    summary["std"],
+                )
+
+            # Record numerical test metrics.
+            for metric_name, metric_value in test_metrics.items():
+                if isinstance(metric_value, (int, float)):
+                    mlflow.log_metric(
+                        f"test_{metric_name}",
+                        metric_value,
+                    )
+
+            # Preserve the confusion matrix as an artifact.
+            mlflow.log_dict(
+                {
+                    "confusion_matrix": test_metrics["confusion_matrix"],
+                    "labels": {
+                        "0": "No heart disease recorded",
+                        "1": "Heart disease present",
+                    },
+                },
+                "confusion_matrix.json",
+            )
+
+            # Save the complete fitted preprocessing/model pipeline.
+            mlflow.sklearn.log_model(
+                sk_model=fitted_model,
+                artifact_path="model",
+            )
+
+            print("MLflow run recorded:", model_name)
 
         print("\nHeld-out test metrics:")
 

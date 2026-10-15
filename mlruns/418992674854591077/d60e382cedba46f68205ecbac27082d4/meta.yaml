@@ -1,0 +1,14 @@
+artifact_uri: file:///run/media/abhik/HDD-1TB/mlops-assignment/mlruns/418992674854591077/d60e382cedba46f68205ecbac27082d4/artifacts
+end_time: 1792077364681
+entry_point_name: ''
+experiment_id: '418992674854591077'
+lifecycle_stage: active
+run_id: d60e382cedba46f68205ecbac27082d4
+run_name: logistic_regression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1792077358141
+status: 3
+tags: []
+user_id: abhik

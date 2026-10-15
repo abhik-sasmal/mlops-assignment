@@ -1,0 +1,14 @@
+artifact_uri: file:///run/media/abhik/HDD-1TB/mlops-assignment/mlruns/418992674854591077/6ee1e9388d534494b0879ff1911dd2ab/artifacts
+end_time: 1792077372865
+entry_point_name: ''
+experiment_id: '418992674854591077'
+lifecycle_stage: active
+run_id: 6ee1e9388d534494b0879ff1911dd2ab
+run_name: random_forest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1792077369472
+status: 3
+tags: []
+user_id: abhik

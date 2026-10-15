@@ -1,0 +1,16 @@
+{
+  "confusion_matrix": [
+    [
+      27,
+      6
+    ],
+    [
+      2,
+      26
+    ]
+  ],
+  "labels": {
+    "0": "No heart disease recorded",
+    "1": "Heart disease present"
+  }
+}

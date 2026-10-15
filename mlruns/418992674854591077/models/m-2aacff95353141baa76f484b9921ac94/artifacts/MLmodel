@@ -1,0 +1,22 @@
+artifact_path: file:///run/media/abhik/HDD-1TB/mlops-assignment/mlruns/418992674854591077/models/m-2aacff95353141baa76f484b9921ac94/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.9.25
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+mlflow_version: 3.1.4
+model_id: m-2aacff95353141baa76f484b9921ac94
+model_size_bytes: 3962
+model_uuid: m-2aacff95353141baa76f484b9921ac94
+prompts: null
+run_id: d60e382cedba46f68205ecbac27082d4
+utc_time_created: '2026-10-15 15:15:58.564839'
